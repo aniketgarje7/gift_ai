@@ -9,7 +9,7 @@ import LoadingAnimation from '../../component/LoadingAnimation';
 import MainLoader from '../../component/MainLoader';
 import { useDispatch } from 'react-redux';
 import { setSearchChat } from '@/store/slices/searchSlice';
-// import LoadGame from '../../component/LoadGame';
+
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);

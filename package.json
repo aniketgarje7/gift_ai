@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/red-hat-display": "^4.5.12",
     "@reduxjs/toolkit": "^1.9.5",
     "framer-motion": "^10.12.4",
     "gsap": "^3.11.5",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "react-loader-spinner": "^5.3.4",
     "react-redux": "^8.0.5"
   }

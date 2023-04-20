@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 
 
 const SearchBar = ({placeholder,isLoading,setIsLoading}) => {
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState('');
   const dispatch = useDispatch();
   const router = useRouter();
   const searchChat = useSelector(selectSearchChat);
   const textareaRef = useRef(null);
 
   const handleSearch = () => {
-    if(!searchText){
+    if(searchText===''){
      textareaRef.current.focus();
      return;
     }
@@ -22,8 +22,9 @@ const SearchBar = ({placeholder,isLoading,setIsLoading}) => {
       if (res.success) {
         dispatch(setSearchChat([...searchChat, { "role": "user", "content": `${searchText}` }, { "role": "assistant", "content": `${res.formatted_response}` }]))
         setIsLoading(false);
-        setSearchText();
+        setSearchText('');
         router.push("/search");
+        
       }
     });
   };

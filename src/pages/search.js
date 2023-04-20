@@ -108,7 +108,7 @@ const Search = () => {
                           </Link>
                           <div className="card-body">
                             <h5 className="card-title"><SeeMore message={product.title}/></h5>
-                            <p className="card-text"><SeeMore message={product.description}/></p>
+                            {/* <p className="card-text"><SeeMore message={product.description}/></p> */}
                             <span className="card-price">
                               {" "}
                               <BiRupee />

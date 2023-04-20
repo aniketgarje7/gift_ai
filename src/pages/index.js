@@ -8,14 +8,15 @@ import { useEffect, useState } from 'react';
 import LoadingAnimation from '../../component/LoadingAnimation';
 import MainLoader from '../../component/MainLoader';
 import { useDispatch } from 'react-redux';
-import { setSearchChat } from '@/store/slices/searchSlice';
+import { setSearchChat,setResult } from '@/store/slices/searchSlice';
 
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   useEffect(()=>{
-    dispatch(setSearchChat([{ "role": "system", "content": "You are a helpful assistant." }]))
+    dispatch(setSearchChat([{ "role": "system", "content": "You are a helpful assistant." }]));
+    dispatch(setResult({}));
   },[])
   return (
     <>

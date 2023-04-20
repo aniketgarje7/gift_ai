@@ -1,13 +1,13 @@
-import Head from "next/head";
-import { useEffect } from "react";
-import { TweenMax} from "gsap/all";
-import { gsap } from "gsap";
-import { PixiPlugin } from "gsap/PixiPlugin.js";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
-import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js";
-if (process.client) {
-    gsap.registerPlugin(MorphSVGPlugin);
-}
+// import Head from "next/head";
+// import { useEffect } from "react";
+// import { TweenMax} from "gsap/all";
+// import { gsap } from "gsap";
+// import { PixiPlugin } from "gsap/PixiPlugin.js";
+// import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
+// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js";
+// if (process.client) {
+//     gsap.registerPlugin(MorphSVGPlugin);
+// }
 
 
 const LoadGame = ()=>{

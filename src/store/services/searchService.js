@@ -7,7 +7,7 @@ export const searchService = {
 function searchFetch(data) {
     const requestOptions = {
         method: "POST",
-        headers: reqHelper.reqJson(),
+        headers: reqHelper.reqHeader(),
         body: JSON.stringify(data),
     };
 

@@ -108,6 +108,7 @@
   background-size: cover;
   height: 50vh;
   min-height: 300px;
+
 }
 .footer-content {
   position: absolute;
@@ -117,10 +118,11 @@
   background-color: #f4505026;
   padding: 14px;
   color: #f45050;
-}
 
+} 
 .footer-link {
   color: #f45050;
+
 }
 @media (max-width: 768px) {
   #footer-link-parent {

@@ -57,7 +57,7 @@ const Search = () => {
                     <div className="card-text search-input position-relative p-1" id='scroll'>
                     {searchChat.length>1 && searchChat.map((chat,key)=>key!==0 && <div key={key}>{chat.role==='user'?
                         <div className="text-start profile-1-text row position-relative" key={key}>
-                          <img src="./assets/profile1.png" alt="profile" className="profile1" />
+                          <img src="./assets/user.svg" alt="profile" className="profile1" />
                           <span className=" profile-1-span col-md-6">{chat.content}</span>
                         </div>
                       
@@ -70,7 +70,7 @@ const Search = () => {
                             {" "}
                              <SeeMore message={chat.content} />
                           </span>
-                          <img src="./assets/profile2.png" alt="profile" className="profile2" />
+                          <img src="./assets/user.svg" alt="profile" className="profile2" />
                         </div>
                     }</div>)}
                     </div>

@@ -1,13 +1,10 @@
-// import Head from "next/head";
-// import { useEffect } from "react";
-// import { TweenMax} from "gsap/all";
+import Head from "next/head";
+import { useEffect } from "react";
+// import { TweenMax,tween} from "gsap/all";
 // import { gsap } from "gsap";
 // import { PixiPlugin } from "gsap/PixiPlugin.js";
 // import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
-// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js";
-// if (process.client) {
-//     gsap.registerPlugin(MorphSVGPlugin);
-// }
+// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 
 const LoadGame = ()=>{
@@ -16,6 +13,8 @@ const LoadGame = ()=>{
         var cursor = svg.createSVGPoint();
         var arrows = document.querySelector(".arrows");
         var randomAngle = 0;
+
+        // center of target
         var target = {
             x: 900,
             y: 249.5
@@ -112,13 +111,13 @@ const LoadGame = ()=>{
             TweenMax.to("#bow", 0.4, {
                 scaleX: 1,
                 transformOrigin: "right center",
-                // ease: Elastic.easeOut
+                ease: Elastic.easeOut
             });
             TweenMax.to("#bow polyline", 0.4, {
                 attr: {
                     points: "88,200 88,250 88,300"
                 },
-                // ease: Elastic.easeOut
+                ease: Elastic.easeOut
             });
             // duplicate arrow
             var newArrow = document.createElementNS("http://www.w3.org/2000/svg", "use");
@@ -126,7 +125,7 @@ const LoadGame = ()=>{
             arrows.appendChild(newArrow);
 
             // animate arrow along path
-            var path = MorphSVGPlugin.pathDataToBezier("#arc");
+            var path = MotionPathPlugin.rawPathToString("#arc");
             TweenMax.to([newArrow], 0.5, {
                 force3D: true,
                 bezier: {
@@ -241,7 +240,13 @@ const LoadGame = ()=>{
     return (
         <>
         <Head>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineMax.min.js" integrity="sha512-a54wh9uXa8J4g//WG0mD1V2uZvIhh2MYiTHfEQz35HidGWgOQOon+0Kyv9SMokEvEwGxOoqpKY4NJWm4Yllesg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineLite.min.js" integrity="sha512-KVyWywOa+EX/gjQRaqJFVzYUom+zYI35ZvlmrS+Iy1xR1tROgzGrokElyRFm1OlNXpqcRVHeKqlpRuWjkkWVcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js" integrity="sha512-rHHbPrPs57SzpfKq5r2V2zIWRPcBS8jYxpm93MYTJpOCnrhPbOjrEdmQygLPe7JK9+EskLfN3VPQccCpjz+rqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/jquery.gsap.min.js" integrity="sha512-U6V+5KpA/zdRX3ckpGqMhb+FAG/oZMt4BViKmB2MWyKwcvZ576HsjbfksQb58i53uiD7CqhlB+LYJqbSd+J25Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js" integrity="sha512-yd5Au2j0TkK6KYCxoyVKNwVHqN3cywVXkGFA4H/6lJ0sRfHhLDaA47K9wGi9jcjn3A+iYRIvmEl/e9+sJZ+Ucg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/gsap/all.min.js" integrity="sha512-yd5Au2j0TkK6KYCxoyVKNwVHqN3cywVXkGFA4H/6lJ0sRfHhLDaA47K9wGi9jcjn3A+iYRIvmEl/e9+sJZ+Ucg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         </Head>
     
             <svg id="game" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" overflow="visible">
@@ -271,7 +276,7 @@ const LoadGame = ()=>{
                 <clipPath id="mask">
                     <polygon opacity=".5" points="0,0 1500,0 1500,200 970,290 950,240 925,220 875,280 890,295 920,310 0,350" pointer-events="none" />
                 </clipPath>
-                <g className="arrows" clip-path="url(#mask)" pointer-events="none">
+                <g className="arrows" clipPath="url(#mask)" pointer-events="none">
                 </g>
                 <g className="miss" fill="#aaa" opacity="0" transform="translate(0, 100)">
                     <path d="M358 194L363 118 386 120 400 153 416 121 440 119 446 203 419 212 416 163 401 180 380 160 381 204" />
@@ -306,4 +311,4 @@ const LoadGame = ()=>{
     )
 }
 
-export default LoadGame;
+// export default LoadGame;

@@ -10,7 +10,6 @@ import MainLoader from '../../component/MainLoader';
 import { useDispatch } from 'react-redux';
 import { setSearchChat,setResult } from '@/store/slices/searchSlice';
 
-
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
@@ -27,7 +26,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isLoading && <div className='main-loader ' ><MainLoader /> </div>}
-     {/* {isLoading && <LoadGame/>} */}
       <div className={isLoading?'body opacity-body ':'body'}>
         <Header />
         <div className='main'>

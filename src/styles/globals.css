@@ -328,3 +328,42 @@ color: #F45050;
 }
 }
 
+.privacy-policy-content{
+  margin-top: -200px;
+  box-shadow: 0px 19px 30px rgba(244, 80, 80, 0.13);
+  background-color:#ffffff;
+  line-height: 27px;
+  border-radius: 5px;
+}
+.privacy-policy-heading{
+  color:#F45050
+}
+.privacy-policy-para{
+  font-family: 'Red Hat Display',sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 33px;
+}
+.terms-use-content{
+  margin-top: -230px;
+  margin-bottom: -50px;
+  box-shadow: 0px 19px 30px rgba(244, 80, 80, 0.13);
+  background-color:#ffffff;
+  line-height: 27px;
+  border-radius: 5px;
+}
+.terms-use-heading{
+  color:#F45050
+}
+.terms-use-para{
+  font-family: 'Red Hat Display',sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 33px;
+}
+li::marker {
+  color: #F45050;
+
+}

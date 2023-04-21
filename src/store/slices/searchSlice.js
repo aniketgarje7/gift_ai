@@ -4,24 +4,21 @@ import { searchService } from '../services/searchService';
 export const searchSlice = createSlice({
     name: 'search',
     initialState: {
-        result:{},
-        searchChat: [{ "role": "system", "content": "You are a helpful assistant." }],
-        googleResult:{}
+        result: {},
+        searchChat: [{ "role": "system", "content": "You are a helpful assistant." }]
     },
     reducers: {
-        setResult: (state,action) => {
+        setResult: (state, action) => {
             state.result = action.payload
         },
-        setSearchChat:(state,action)=>{
+        setSearchChat: (state, action) => {
             state.searchChat = action.payload
-        },
-       setGoogleResult:(state,action)=>{
-        state.googleResult = action.payload
-       }
+        }
+
     },
 });
 
-export const { setResult,setSearchChat,setGoogleResult} = searchSlice.actions;
+export const { setResult, setSearchChat } = searchSlice.actions;
 
 export const searchFetch = (payload) => (dispatch) => {
     return searchService.searchFetch(payload).then((response) => {
@@ -33,18 +30,8 @@ export const searchFetch = (payload) => (dispatch) => {
     );
 }
 
-export const searchGoogle = (payload) => (dispatch) => {
-    return searchService.searchGoogle(payload).then((response) => {
-        dispatch(setGoogleResult(response));
-        return true;
-    }, (error) => {
-        return false;
-    }
-    );
-}
 
 export const selectResult = (state) => state.search.result;
-export const selectSearchChat = (state)=>state.search.searchChat;
-export const selectSearchGoogle = (state) => state.search.googleResult;
+export const selectSearchChat = (state) => state.search.searchChat;
 
-export default searchSlice.reducer
+export default searchSlice.reducer;

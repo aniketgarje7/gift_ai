@@ -7,7 +7,7 @@ import { BiRupee } from "react-icons/bi";
 import { BsArrowRightShort, BsArrowRight } from "react-icons/bs";
 import { IoMdRefresh } from "react-icons/io";
 import { useSelector, useDispatch } from "react-redux";
-import { selectResult, selectSearchChat, selectSearchGoogle } from "@/store/slices/searchSlice";
+import { selectResult, selectSearchChat } from "@/store/slices/searchSlice";
 import { useEffect, useState } from "react";
 import SearchBar from "../../component/SearchBar";
 import SeeMore from '../../component/SeeMore';
@@ -18,13 +18,12 @@ const Search = () => {
   const result = useSelector(selectResult);
   const [isLoading, setIsLoading] = useState(false);
   const searchChat = useSelector(selectSearchChat);
-  const searchGoogle = useSelector(selectSearchGoogle)
 
-  useEffect(()=>{
+  useEffect(() => {
     var objDiv = document.getElementById("scroll");
-    if(!objDiv)return;   
+    if (!objDiv) return;
     objDiv.scrollTop = objDiv.scrollHeight;
-  },[searchChat])
+  }, [searchChat])
   return (
     <>
       <Head>
@@ -34,14 +33,14 @@ const Search = () => {
         <link rel="icon" href="/gift.svg" />
       </Head>
       {isLoading && <div className='main-loader ' ><MainLoader /> </div>}
-      <div className={isLoading?'body opacity-body':'body'}>
+      <div className={isLoading ? 'body opacity-body' : 'body'}>
         <Header />
         <div className="main">
           <section>
             <div className="">
               <div className="bg-heading-search container-fluid"></div>
             </div>
-          </section>e
+          </section>
 
           <section>
             <div className="container search-section-search-page">
@@ -56,24 +55,24 @@ const Search = () => {
                 <div className="card border-0 main-card">
                   <div className="card-body">
                     <div className="card-text search-input position-relative p-1" id='scroll'>
-                    {searchChat.length>1 && searchChat.map((chat,key)=>key!==0 && <div key={key}>{chat.role==='user'?
+                      {searchChat.length > 1 && searchChat.map((chat, key) => key !== 0 && <div key={key}>{chat.role === 'user' ?
                         <div className="text-start profile-1-text row position-relative" key={key}>
                           <img src="./assets/user.svg" alt="profile" className="profile1" />
                           <span className=" profile-1-span col-md-6">{chat.content}</span>
                         </div>
-                      
-                      :
+
+                        :
                         <div className="text-end row justify-content-end position-relative profile-2-text" key={key}>
                           <span
                             className="col-md-6 profile-2-span text-start
                          "
                           >
                             {" "}
-                             <SeeMore message={chat.content} />
+                            <SeeMore message={chat.content} />
                           </span>
                           <img src="./assets/user.svg" alt="profile" className="profile2" />
                         </div>
-                    }</div>)}
+                      }</div>)}
                     </div>
 
                     <hr></hr>
@@ -84,7 +83,7 @@ const Search = () => {
                           Search <BsArrowRightShort className="right-arrow"/>
                         </button>
                       </div> */}
-                      <SearchBar placeholder="Continue Your Search" isLoading={isLoading} setIsLoading={setIsLoading}/>
+                      <SearchBar placeholder="Continue Your Search" isLoading={isLoading} setIsLoading={setIsLoading} />
                     </div>
                   </div>
                 </div>
@@ -92,30 +91,29 @@ const Search = () => {
             </div>
           </section>
 
-          {searchGoogle.items && searchGoogle.items.length > 0 && (
+          {result.products && result.products.length > 0 && (
             <section className="section-3 container ">
               <div className="col-md-10 mx-auto text-center my-5">
                 <h3>Here are some gift ideas for you:</h3>
               </div>
               <div className="col-md-10 mx-auto cursor-pointer">
                 <div className="row card-row  justify-content-center">
-                  {searchGoogle.items.map((product, key) => (
+                  {result &&
+                    result.products &&
+                    result.products.map((product, key) => (
                       <div className="col-lg-3 col-md-4 col-sm-5 border rounded p-1 m-1" key={key}>
                         <div className="card border-0">
-                          <Link href={product.formattedUrl}>
-                          <img src={(product.pagemap && product.pagemap.cse_image && product.pagemap.cse_image[0].src) ? product.pagemap && product.pagemap.cse_image && product.pagemap.cse_image[0].src:'./gift.svg'} className="card-img-top card-image" alt="..." width={100} height={200} onError={(e) => {
-                            e.currentTarget.onerror = null; // prevents looping
-                            e.currentTarget.src = "./gift.svg";
-                          }} />
+                          <Link href={product.url}>
+                            <img src={product.image_url} className="card-img-top card-image" alt="..." width={100} height={100} />
                           </Link>
                           <div className="card-body">
-                            <h5 className="card-title"><SeeMore message={product.title}/></h5>
+                            <h5 className="card-title"><SeeMore message={product.title} /></h5>
                             {/* <p className="card-text"><SeeMore message={product.description}/></p> */}
-                            {/* <span className="card-price">
+                            <span className="card-price">
                               {" "}
                               <BiRupee />
                               {product.price}
-                            </span> */}
+                            </span>
                           </div>
                         </div>
                       </div>

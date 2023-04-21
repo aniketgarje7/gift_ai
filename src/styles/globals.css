@@ -365,5 +365,12 @@ line-height: 33px;
 }
 li::marker {
   color: #F45050;
+}
 
+.product-button{
+  position: relative;
+  z-index: 1;
+}
+.product-button:hover{
+  background-color: #F45050 !important;
 }

@@ -22,20 +22,13 @@ const SearchBar = ({placeholder,isLoading,setIsLoading}) => {
       if (res.success) {
         dispatch(setSearchChat([...searchChat, { "role": "user", "content": `${searchText}` }, { "role": "assistant", "content": `${res.formatted_response}` }]))
         setSearchText('');
-        searchGoogleApi(res.keywords);
+        setIsLoading(false);
+        router.push("/search");
       }
     });
   };
  
-  const searchGoogleApi = (keywords)=>{
-      const data = keywords.join(',');
-      dispatch(searchGoogle(data)).then((res)=>{
-        if(res){
-        setIsLoading(false);
-        router.push("/search");
-        }
-      })
-  }
+
   const handletextareaOnchange = (e) => {
     let elem = document.getElementById("home-textarea");
     elem.style.height = `${elem.scrollHeight}px`;

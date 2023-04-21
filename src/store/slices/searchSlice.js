@@ -5,7 +5,8 @@ export const searchSlice = createSlice({
     name: 'search',
     initialState: {
         result:{},
-        searchChat: [{ "role": "system", "content": "You are a helpful assistant." }]
+        searchChat: [{ "role": "system", "content": "You are a helpful assistant." }],
+        googleResult:{}
     },
     reducers: {
         setResult: (state,action) => {
@@ -13,12 +14,14 @@ export const searchSlice = createSlice({
         },
         setSearchChat:(state,action)=>{
             state.searchChat = action.payload
-        }
-    
+        },
+       setGoogleResult:(state,action)=>{
+        state.googleResult = action.payload
+       }
     },
 });
 
-export const { setResult,setSearchChat} = searchSlice.actions;
+export const { setResult,setSearchChat,setGoogleResult} = searchSlice.actions;
 
 export const searchFetch = (payload) => (dispatch) => {
     return searchService.searchFetch(payload).then((response) => {
@@ -30,8 +33,18 @@ export const searchFetch = (payload) => (dispatch) => {
     );
 }
 
+export const searchGoogle = (payload) => (dispatch) => {
+    return searchService.searchGoogle(payload).then((response) => {
+        dispatch(setGoogleResult(response));
+        return true;
+    }, (error) => {
+        return false;
+    }
+    );
+}
 
 export const selectResult = (state) => state.search.result;
 export const selectSearchChat = (state)=>state.search.searchChat;
+export const selectSearchGoogle = (state) => state.search.googleResult;
 
 export default searchSlice.reducer

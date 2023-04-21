@@ -7,7 +7,7 @@ import { BiRupee } from "react-icons/bi";
 import { BsArrowRightShort, BsArrowRight } from "react-icons/bs";
 import { IoMdRefresh } from "react-icons/io";
 import { useSelector, useDispatch } from "react-redux";
-import { selectResult, selectSearchChat } from "@/store/slices/searchSlice";
+import { selectResult, selectSearchChat, selectSearchGoogle } from "@/store/slices/searchSlice";
 import { useEffect, useState } from "react";
 import SearchBar from "../../component/SearchBar";
 import SeeMore from '../../component/SeeMore';
@@ -18,7 +18,8 @@ const Search = () => {
   const result = useSelector(selectResult);
   const [isLoading, setIsLoading] = useState(false);
   const searchChat = useSelector(selectSearchChat);
-  
+  const searchGoogle = useSelector(selectSearchGoogle)
+
   useEffect(()=>{
     var objDiv = document.getElementById("scroll");
     if(!objDiv)return;   
@@ -40,7 +41,7 @@ const Search = () => {
             <div className="">
               <div className="bg-heading-search container-fluid"></div>
             </div>
-          </section>
+          </section>e
 
           <section>
             <div className="container search-section-search-page">
@@ -91,29 +92,30 @@ const Search = () => {
             </div>
           </section>
 
-          {result.products && result.products.length > 0 && (
+          {searchGoogle.items && searchGoogle.items.length > 0 && (
             <section className="section-3 container ">
               <div className="col-md-10 mx-auto text-center my-5">
                 <h3>Here are some gift ideas for you:</h3>
               </div>
               <div className="col-md-10 mx-auto cursor-pointer">
                 <div className="row card-row  justify-content-center">
-                  {result &&
-                    result.products &&
-                    result.products.map((product, key) => (
+                  {searchGoogle.items.map((product, key) => (
                       <div className="col-lg-3 col-md-4 col-sm-5 border rounded p-1 m-1" key={key}>
                         <div className="card border-0">
-                          <Link href={product.url}>
-                            <img src={product.image_url} className="card-img-top card-image" alt="..." width={100} height={100} />
+                          <Link href={product.formattedUrl}>
+                          <img src={(product.pagemap && product.pagemap.cse_image && product.pagemap.cse_image[0].src) ? product.pagemap && product.pagemap.cse_image && product.pagemap.cse_image[0].src:'./gift.svg'} className="card-img-top card-image" alt="..." width={100} height={200} onError={(e) => {
+                            e.currentTarget.onerror = null; // prevents looping
+                            e.currentTarget.src = "./gift.svg";
+                          }} />
                           </Link>
                           <div className="card-body">
                             <h5 className="card-title"><SeeMore message={product.title}/></h5>
                             {/* <p className="card-text"><SeeMore message={product.description}/></p> */}
-                            <span className="card-price">
+                            {/* <span className="card-price">
                               {" "}
                               <BiRupee />
                               {product.price}
-                            </span>
+                            </span> */}
                           </div>
                         </div>
                       </div>

@@ -320,9 +320,7 @@ color: #F45050;
   }
 }
 
-.card-image{
-  object-fit: contain;
-}
+
 @media (min-width: 992px){
 .col-lg-3 {
     flex: 0 0 auto;

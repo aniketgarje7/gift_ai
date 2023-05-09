@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 import SeeMore from "component/SeeMore";
 import { BsDot } from 'react-icons/bs';
 import Slider from "react-slick";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Products = () => {
 
   const result = useSelector(selectResult);
- 
+ console.log(result.products)
  
   var settings = {
     dots: true,
@@ -47,6 +49,25 @@ const Products = () => {
     ]
   };
 
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   return (
     <>
       {result.products && result.products.length > 0 && (
@@ -56,11 +77,9 @@ const Products = () => {
           </div>
           <div className="col-md-10 mx-auto cursor-pointer">
             <div className="row  justify-content-center">
-              <Slider {...settings}>
-              {result &&
-                result.products &&
-                result.products.map((product, key) => (
-                  <div className="  rounded p-1 m-1 product-card" key={key+'12'}>
+              <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile","desktop"]}>
+              {result.products.map((product, key) => 
+                <div className="rounded p-1 m-1 product-card " key={key+'12'}>
                     <div className="card border-0">
                       <Link href={product.url} className='card-image-link'>
                         <img src={product.image_url} className="card-img-top card-image" alt="product-image" width={100} height={100} />
@@ -79,8 +98,8 @@ const Products = () => {
                     </div>
                   </div>
                   
-                ))}
-              </Slider>
+                )}
+              </Carousel>
             </div>
         
           </div>

@@ -704,3 +704,16 @@ font-family: 'Poppins', sans-serif;
 .product-button:hover{
   background-color: #F45050 !important;
 }
+.custom-dot-list-style{
+  color: red !important;
+}
+.carousel .control-dots .dot{
+  color: red !important;
+}
+
+.react-multi-carousel-track{
+  margin-bottom: 33px !important;
+}
+.react-multi-carousel-dot--active button{
+ background-color: #F45050 !important;
+}

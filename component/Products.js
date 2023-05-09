@@ -41,7 +41,7 @@ const Products = () => {
           </div>
           <div className="col-md-10 mx-auto cursor-pointer">
             <div className="row  justify-content-center">
-              <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile","desktop"]}>
+              <Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile", "desktop"]} dotListClass="custom-dot-list-style">
               {result.products.map((product, key) => 
                 <div className="rounded p-1 m-1 product-card " key={key+'12'}>
                     <div className="card border-0">

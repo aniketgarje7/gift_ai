@@ -2,10 +2,7 @@ import Link from "next/link";
 import { BiRupee } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
 import { selectResult, selectSearchChat } from "@/store/slices/searchSlice";
-import { useEffect, useState } from "react";
-import SeeMore from "component/SeeMore";
-import { BsDot } from 'react-icons/bs';
-import Slider from "react-slick";
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -14,40 +11,7 @@ const Products = () => {
   const result = useSelector(selectResult);
  console.log(result.products)
  
-  var settings = {
-    dots: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    vertical: false,
-    responsive: [{
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        dots: true,
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 538,
-      settings: {
-        arrows: false,
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
 
-    ]
-  };
 
   const responsive = {
     superLargeDesktop: {

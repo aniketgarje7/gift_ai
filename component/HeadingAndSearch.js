@@ -16,7 +16,7 @@ const HeadingAndSearch = ({isLoading,setIsLoading})=>{
                                 <SearchBar placeholder='Search Your Query' isLoading={isLoading} setIsLoading={setIsLoading} />
                         </div>
                         <div className="input-footer my-3">
-                            Popular<span className="input-footer-span">Best Hp Laptop, Samsung Galaxy S21</span>
+                            Popular: <span className="input-footer-span">Best Hp Laptop, Samsung Galaxy S21</span>
                         </div>
                     </div>
                 </div>

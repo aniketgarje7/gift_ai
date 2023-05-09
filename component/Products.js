@@ -32,6 +32,7 @@ const Products = () => {
       items: 1
     }
   };
+  console.log('d')
   return (
     <>
       {result.products && result.products.length > 0 && (

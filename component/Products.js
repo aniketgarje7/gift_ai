@@ -9,7 +9,7 @@ import 'react-multi-carousel/lib/styles.css';
 const Products = () => {
 
   const result = useSelector(selectResult);
- console.log(result.products)
+
  
 
 

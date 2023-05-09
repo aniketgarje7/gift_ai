@@ -22,13 +22,20 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
     setIsLoading(true);
     dispatch(searchFetch({ messages: [...searchChat, { role: "user", content: `${searchText}` }] })).then((res) => {
       if (res.success) {
+<<<<<<< HEAD
         dispatch(setSearchChat([...searchChat, { role: "user", content: `${searchText}` }, { role: "assistant", content: `${res.formatted_response}` }]));
         setIsLoading(false);
         setSearchText("");
+=======
+        dispatch(setSearchChat([...searchChat, { "role": "user", "content": `${searchText}` }, { "role": "assistant", "content": `${res.formatted_response}` }]))
+        setSearchText('');
+        setIsLoading(false);
+>>>>>>> 12de71eae51f01048dd8e9fe3fdb76314b0fa5dd
         router.push("/search");
       }
     });
   };
+<<<<<<< HEAD
 
   useEffect(() => {
     if (router.pathname.startsWith("/search")) {
@@ -39,6 +46,9 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
       setWidth(`${elem.scrollWidth}`);
     }
   }, []);
+=======
+ 
+>>>>>>> 12de71eae51f01048dd8e9fe3fdb76314b0fa5dd
 
   const handletextareaOnchange = (e) => {
     let elem = document.getElementById("home-textarea");

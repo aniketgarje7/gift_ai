@@ -72,38 +72,7 @@ const Search = () => {
             </div>
           </section>
 
-          {searchGoogle.items && searchGoogle.items.length > 0 && (
-            <section className="section-3 container ">
-              <div className="col-md-10 mx-auto text-center my-5">
-                <h3>Here are some gift ideas for you:</h3>
-              </div>
-              <div className="col-md-10 mx-auto cursor-pointer">
-                <div className="row card-row  justify-content-center">
-                  {searchGoogle.items.map((product, key) => (
-                      <div className="col-lg-3 col-md-4 col-sm-5 border rounded p-1 m-1" key={key}>
-                        <div className="card border-0">
-                          <Link href={product.formattedUrl}>
-                          <img src={(product.pagemap && product.pagemap.cse_image && product.pagemap.cse_image[0].src) ? product.pagemap && product.pagemap.cse_image && product.pagemap.cse_image[0].src:'./gift.svg'} className="card-img-top card-image" alt="..." width={100} height={200} onError={(e) => {
-                            e.currentTarget.onerror = null; // prevents looping
-                            e.currentTarget.src = "./gift.svg";
-                          }} />
-                          </Link>
-                          <div className="card-body">
-                            <h5 className="card-title"><SeeMore message={product.title}/></h5>
-                            {/* <p className="card-text"><SeeMore message={product.description}/></p> */}
-                            {/* <span className="card-price">
-                              {" "}
-                              <BiRupee />
-                              {product.price}
-                            </span> */}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </section>
-          )}
+        <Products/>
         </div>
         
       </div>

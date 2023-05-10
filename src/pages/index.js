@@ -35,9 +35,9 @@ export default function Home() {
           <HomePage isLoading={isLoading} setIsLoading={setIsLoading}/>
         </div>
     
-       
+        <HomePageFooter />
       </div>
-      <HomePageFooter />
+   
     </>
   )
 }

@@ -742,3 +742,8 @@ color: #F45050;
 font-family: 'Roboto', sans-serif;
 }
 
+
+.react-multi-carousel-list{
+  justify-content: center;
+}
+

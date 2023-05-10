@@ -12,7 +12,7 @@ const Products = () => {
   const result = useSelector(selectResult);
 
  
- console.log('ddf')
+ 
 
   const responsive = {
     superLargeDesktop: {

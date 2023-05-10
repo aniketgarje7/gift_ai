@@ -364,7 +364,7 @@ li::marker {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 94vh;
+  /* min-height: 94vh; */
  
 }
 
@@ -504,9 +504,7 @@ color: #000000;
 .image-container{
   
 }
-.background-giftai{
-  height: 120vh;
-}
+
 
 }
 
@@ -641,9 +639,7 @@ border-radius: 8px;
 }
 @media (max-width: 437px){
 
-  .background-giftai{
-  height: 120vh;
-}
+
 
 }
 

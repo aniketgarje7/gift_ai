@@ -377,6 +377,7 @@ li::marker {
   display: flex;
   justify-content: space-between;
    padding: 30px !important;
+   align-items: center;
 }
 .heading-text{
 font-style: normal;

@@ -8,8 +8,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image1.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Text</div>
+          <div className="middle">
+            <div className="text">Text</div>
           </div>
         </motion.div>
         </div>
@@ -18,8 +18,8 @@ const HomePageImages = () => {
       transition={{ type: "grow", stiffness: 600, damping: 20 }} > 
           <img src="/assets/image2.png" alt="image" className="mx-auto image-hover" />
 
-          <div class="middle">
-            <div class="text">Medical</div>
+          <div className="middle">
+            <div className="text">Medical</div>
           </div>
           </motion.div>
         </div>
@@ -27,8 +27,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image3.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Medical</div>
+          <div className="middle">
+            <div className="text">Medical</div>
             </div>
           </motion.div>
           </div>
@@ -36,8 +36,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image4.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Text</div>
+          <div className="middle">
+            <div className="text">Text</div>
           </div>
           </motion.div>
           </div>
@@ -45,8 +45,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image5.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Text</div>
+          <div className="middle">
+            <div className="text">Text</div>
           </div>
           </motion.div>
           </div>
@@ -54,8 +54,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image6.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Text</div>
+          <div className="middle">
+            <div className="text">Text</div>
           </div>
           </motion.div>
           </div>
@@ -63,8 +63,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image7.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Text</div>
+          <div className="middle">
+            <div className="text">Text</div>
           </div>
         </motion.div>
         </div>
@@ -72,8 +72,8 @@ const HomePageImages = () => {
           <motion.div className="position-relative" whileHover={{ scale: 1.5 }}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
           <img src="/assets/image8.png" alt="image" className=" mx-auto image-hover" />
-          <div class="middle">
-            <div class="text">Text</div>
+          <div className="middle">
+            <div className="text">Text</div>
           </div>
         </motion.div>
       </div>

@@ -741,8 +741,9 @@ color: #F45050;
 font-family: 'Roboto', sans-serif;
 }
 
-
+@media (min-width:401px){
 .react-multi-carousel-list{
   justify-content: center;
+}
 }
 

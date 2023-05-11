@@ -400,6 +400,7 @@ font-family: 'Roboto', sans-serif;
   border: none;
   border-radius: 100px;
   padding: 14px;
+  padding-right: 40px;
 }
 
 .search-icon-span{
@@ -436,6 +437,7 @@ color: #000000;
 
 .home-image{
   position: relative;
+  
 }
 
 
@@ -499,6 +501,7 @@ color: #000000;
 }
 .footer-container{
   padding: 20px;
+  margin-top: auto;
 }
 
 @media (max-width: 570px) {
@@ -638,6 +641,9 @@ border-radius: 8px;
 #image5{
   margin-top: 5px;
 }
+.home-image{
+  padding-top: 40px;
+}
 }
 @media (min-width:719px){
   #image1{
@@ -740,8 +746,9 @@ color: #F45050;
 font-family: 'Roboto', sans-serif;
 }
 
-
+@media (min-width:401px){
 .react-multi-carousel-list{
   justify-content: center;
+}
 }
 

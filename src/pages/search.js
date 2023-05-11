@@ -74,9 +74,9 @@ const Search = () => {
 
         <Products/>
         </div>
-        
+        <SearchPageFooter />
       </div>
-      <SearchPageFooter />
+      
     </>
   );
 };

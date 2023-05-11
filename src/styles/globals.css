@@ -367,10 +367,15 @@ li::marker {
 .background-giftai{
    background-image: url("/assets/giftaiBackground.png");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  /* min-height: 94vh; */
- 
+}
+
+
+@media (max-width:757px){
+  .background-giftai{
+    background-size: cover;
+  }
 }
 
 .header-home-page{

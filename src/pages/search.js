@@ -45,6 +45,7 @@ const Search = () => {
             <div className="">
               <div className="bg-heading-search container-fluid"></div>
             </div>
+            
           </section>
 
           <section>

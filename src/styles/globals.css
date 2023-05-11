@@ -33,12 +33,12 @@
 }
 
 .bg-heading-search {
-  background-image: url("/assets/searchBackground.png");
+  background-image: url("/assets/searchBg.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   min-height: 260px;
-  height: 35vh;
+  
 }
 .padding-heading {
   padding: 0px 46px;
@@ -73,7 +73,7 @@
   font-style: Medium;
   overflow: scroll;
   overflow-x: hidden;
-  max-height: 250px;
+  max-height: 320px;
   min-height: 100px;
 }
 
@@ -405,8 +405,8 @@ font-family: 'Roboto', sans-serif;
 
 .search-icon-span{
 position: absolute;
-    right: 6px;
-    top: 0px;
+   right: 14px;
+    top: 3px;
     padding: 10px;
    background: #F45050;
     border-radius: 50%;
@@ -519,7 +519,7 @@ color: #000000;
 }
 
 .image-container{
- padding-bottom: 100px;
+ padding-bottom: 120px;
 }
 
 .footer-contents{
@@ -618,8 +618,7 @@ border-radius: 8px;
   color: #F45050;;
 }
 .search-page-footer{
-  padding: 20px;
-  margin-top: 25px;
+  padding: 25px;
 }
 
 @media (max-width: 570px){
@@ -631,36 +630,21 @@ border-radius: 8px;
   }
 }
 
-@media (min-width:571px){
-#image2{
-  margin-top: 70px;
+#home-textarea{
+  box-shadow: 0px 2px 1px 3px rgba(244, 80, 80, 0.05);
+border-radius: 100px;
 }
-#image4{
-  margin-top: 65px;
-}
-#image5{
-  margin-top: 5px;
-}
-.home-image{
-  padding-top: 40px;
-}
-}
-@media (min-width:719px){
-  #image1{
-    margin-right: -71px;
-  }
-}
-@media (max-width: 437px){
 
 
 
-}
 
 @media (max-width: 377px){
    .image-hover{
     width: 55px;
    }
-
+.home-image{
+ padding-bottom: 50px !important;
+}
 .text{
   font-size: 10px;
 }
@@ -752,3 +736,77 @@ font-family: 'Roboto', sans-serif;
 }
 }
 
+@media (min-width:575px){
+  .home-image{
+    padding-bottom:150px !important;
+  }
+    #image_2{
+ right: 36px;
+    top: 51px;
+}
+#image_1{
+  right: 60px;
+}
+#image_3{
+  left: 62px;
+}
+#image_4{
+  right: 15px;
+  top: 30px;
+}
+#image_5{
+     top: -65px;
+    left: 7px;
+}
+#image6{
+  right: 50px;
+}
+
+}
+
+@media (min-width:993px){
+  #image_2{
+ right: 105px;
+    top: 51px;
+}
+#image_1{
+  right: 60px;
+}
+#image_3{
+  left: 100px;
+}
+#image_4{
+  right: 100px;
+  top: 24px;
+}
+#image_5{
+     top: -65px;
+    left: 24px;
+}
+}
+
+  .home-image{
+    padding-bottom:75px;
+  }
+@media (max-width:575px){
+  #image_1{
+           right: -9px;
+    top: 15px;
+  }
+  #image_2{
+    right: 15px;
+  }
+  #image_3{
+    right: 20px;
+  }
+  #image_5{
+    top: -5px;
+  }
+  #image_7{
+        left: 10px;
+    top: -19px;
+  }
+  #image_8{
+    top: -10px;
+  }
+}

@@ -33,7 +33,7 @@ const HomePageImages = () => {
   const framergrow = {scale:1.5};
   const framergrow2 = {scale:2};
   return (
-    <div className="image-container container text-center my-5">
+    <div className="image-container container text-center my-5 mx-auto">
       <div className="row justify-content-center gy-5 gutters">
         <div className="col-sm-3 col-4 home-image" id='image1' >
           <motion.div id="image_1" className="position-absolute" whileHover={matches?framergrow2:framergrow}

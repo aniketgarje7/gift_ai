@@ -57,8 +57,8 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
   return (
     <div className="container position-relative">
       {page ? (
-        <div className="row ">
-          <div className="col-lg-10 ">
+        <div className="search-input-main">
+          <div className="w-85">
             <input
               ref={textareaRef}
               id="search-textarea"
@@ -69,7 +69,7 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
               onKeyDown={handleKeyDown}
             />
           </div>
-          <div className="col-lg-2  send-button-div">
+          <div className="w-15 send-button-div">
             <button className="btn send-button px-5" onClick={(e) => handleSearch(e)} disabled={isLoading}>
               Send
             </button>

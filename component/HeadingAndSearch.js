@@ -6,10 +6,10 @@ const HeadingAndSearch = ({isLoading,setIsLoading})=>{
     
     return (
         <>
-            <div className='heading-and-search my-5'>
+            <div className='heading-and-search '>
                 <div className="container">
                     <div>
-                        <div className="col-lg-10 mx-auto text-center heading-text">It is a long established fact that a reader will be distracted by looking at its layout.</div>
+                        <div className="col-lg-9 mx-auto text-center heading-text">It is a long established fact that a reader will be distracted by looking at its layout.</div>
                     </div>
                     <div className="col-lg-8 col-md-8 mx-auto">
                         <div className="">

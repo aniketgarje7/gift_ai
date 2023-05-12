@@ -50,7 +50,7 @@ const Search = () => {
 
           <section>
             <div className="container search-section-search-page">
-              <div className=" mx-auto">
+              <div className="col-lg-11 mx-auto">
             
                 <div className="card border-0 main-card">
                   

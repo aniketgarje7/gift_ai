@@ -56,7 +56,10 @@
   font-size: 20px !important;
 }
 .main-card {
-  box-shadow: 0px 19px 30px 0px #f4505021;
+border: 4px solid #FFFFFF !important;
+box-shadow: 0px 5px 200px rgba(0, 0, 0, 0.1);
+border-radius: 15px !important;
+
 }
 .search-section {
   margin-top: -185px;
@@ -399,15 +402,14 @@ font-family: 'Roboto', sans-serif;
   outline: none;
   border: none;
   border-radius: 100px;
-  padding: 14px;
-  padding-right: 40px;
+ padding: 25px 50px 21px 30px;
 }
 
 .search-icon-span{
 position: absolute;
-   right: 14px;
-    top: 3px;
-    padding: 10px;
+  right: 19px;
+    top: 9px;
+    padding: 14px;
    background: #F45050;
     border-radius: 50%;
 }
@@ -531,6 +533,7 @@ color: #000000;
 border: 1px solid #EDEDED;
 border-radius: 6px;
 width: 100%;
+padding: 15px 15px;
 }
   
 .search-page-textarea{
@@ -731,8 +734,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 @media (min-width:401px){
-.react-multi-carousel-list{
-  justify-content: center;
+.react-multi-carousel-track {
+  margin: auto !important;
 }
 }
 
@@ -766,14 +769,14 @@ font-family: 'Roboto', sans-serif;
 
 @media (min-width:993px){
   #image_2{
- right: 105px;
+ right: 83px;
     top: 51px;
 }
 #image_1{
   right: 60px;
 }
 #image_3{
-  left: 100px;
+  left: 135px;
 }
 #image_4{
   right: 100px;
@@ -783,6 +786,11 @@ font-family: 'Roboto', sans-serif;
      top: -65px;
     left: 24px;
 }
+.gutters{
+  --bs-gutter-y: 5rem !important;
+}
+
+
 }
 
   .home-image{
@@ -810,3 +818,51 @@ font-family: 'Roboto', sans-serif;
     top: -10px;
   }
 }
+.search-input-homepage::placeholder{
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #B1B1B1;
+font-family: "Roboto",sans-serif;
+}
+@media (min-width:1200px){
+  .gutters{
+        --bs-gutter-x: -150px !important;
+  }
+  .image-container{
+     margin-left: 120px !important;
+  }
+}
+.react-multi-carousel-dot button{
+  border-color: #FFFFFF !important;
+}
+.react-multi-carousel-dot-list{
+  padding-bottom: 20px !important;
+}
+.react-multi-carousel-list{
+  padding-bottom: 50px !important;
+}
+.search-input-main{
+  display: flex;
+  flex-wrap: wrap;
+}
+.w-85{
+  width: 85%;
+}
+.w-15{
+  width: 15%;
+}
+@media (max-width:997px){
+  .search-input-main{
+    flex-direction: column;
+  }
+  .w-85{
+    width: 100%;
+  }
+}
+.heading-and-search{
+      margin-top: 120px !important;
+      margin-bottom: 3rem;
+}
+

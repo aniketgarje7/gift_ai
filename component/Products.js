@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BiRupee } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
 import { selectResult, selectSearchChat } from "@/store/slices/searchSlice";
-
+import { useState,useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { CiMobile2 } from "react-icons/ci";
@@ -10,15 +10,11 @@ import { CiMobile2 } from "react-icons/ci";
 const Products = () => {
 
   const result = useSelector(selectResult);
-
- 
- 
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 6
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -37,7 +33,8 @@ const Products = () => {
       items: 1
     }
   };
-  console.log('d')
+ 
+
   return (
     <>
       {result.products && result.products.length > 0 && (

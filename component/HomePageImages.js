@@ -38,7 +38,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image1' >
           <motion.div id="image_1" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image1.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo4.jpeg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Text</div>
           </div>
@@ -47,7 +47,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image2'>
           <motion.div id="image_2" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }} > 
-          <img src="/assets/image2.png" alt="image" className="mx-auto image-hover" />
+          <img src="/assets/demo.jpeg" alt="image" className="mx-auto image-hover" />
 
           <div className="middle">
             <div className="text">Medical</div>
@@ -57,7 +57,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image3'>
           <motion.div id="image_3" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image3.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo5.jpeg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Medical</div>
             </div>
@@ -66,7 +66,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image4'>
           <motion.div id="image_4" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image4.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo9.jpg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Text</div>
           </div>
@@ -75,7 +75,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image5'>
           <motion.div id="image_5" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image5.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo11.jpg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Text</div>
           </div>
@@ -84,7 +84,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image6'>
           <motion.div id="image_6" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image6.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo12.jpg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Text</div>
           </div>
@@ -93,7 +93,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image7'>
           <motion.div id="image_7" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image7.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo5.jpeg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Text</div>
           </div>
@@ -102,7 +102,7 @@ const HomePageImages = () => {
         <div className="col-sm-3 col-4 home-image" id='image8'>
           <motion.div id="image_8" className="position-absolute" whileHover={matches?framergrow2:framergrow}
       transition={{ type: "grow", stiffness: 600, damping: 20 }}>
-          <img src="/assets/image8.png" alt="image" className=" mx-auto image-hover" />
+          <img src="/assets/demo3.jpg" alt="image" className=" mx-auto image-hover" />
           <div className="middle">
             <div className="text">Text</div>
           </div>

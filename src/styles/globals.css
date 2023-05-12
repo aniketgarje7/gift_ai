@@ -38,7 +38,7 @@
   background-position: bottom;
   background-size: cover;
   min-height: 260px;
-  
+  height: 32vh;
 }
 .padding-heading {
   padding: 0px 46px;
@@ -368,9 +368,9 @@ li::marker {
 /* new design */
 
 .background-giftai{
-   background-image: url("/assets/giftaiBackground.png");
-  background-position: center;
-  background-size: 100% 100%;
+   background-image: url("/assets/giftbg.svg");
+  background-position: bottom;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -472,7 +472,6 @@ color: #FFFFFF;
 .image-hover {
   opacity: 1;
   display: block;
-  height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -644,6 +643,7 @@ border-radius: 100px;
 @media (max-width: 377px){
    .image-hover{
     width: 55px;
+    height: 55px;
    }
 .home-image{
  padding-bottom: 50px !important;
@@ -769,14 +769,14 @@ font-family: 'Roboto', sans-serif;
 
 @media (min-width:993px){
   #image_2{
- right: 83px;
+ right: 62px;
     top: 51px;
 }
 #image_1{
   right: 60px;
 }
 #image_3{
-  left: 135px;
+  left: 100px;
 }
 #image_4{
   right: 100px;
@@ -789,7 +789,9 @@ font-family: 'Roboto', sans-serif;
 .gutters{
   --bs-gutter-y: 5rem !important;
 }
-
+#image_6{
+  left: 40px;
+}
 
 }
 
@@ -866,3 +868,6 @@ font-family: "Roboto",sans-serif;
       margin-bottom: 3rem;
 }
 
+.image-hover{
+  border-radius: 50% !important;
+}

@@ -58,7 +58,7 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
     <div className="container position-relative">
       {page ? (
         <div className="search-input-main">
-          <div className="w-85">
+          <div className="w-83">
             <input
               ref={textareaRef}
               id="search-textarea"

@@ -38,8 +38,8 @@ const Products = () => {
   return (
     <>
       {result.products && result.products.length > 0 && (
-        <section className="products-bg  ">
-          <div className="col-md-10 mx-auto text-center my-5">
+        <section className="products-bg container ">
+          <div className="col-md-11 mx-auto text-center my-5">
             <h3 className="search-page-text">Here are some gift ideas for you:</h3>
           </div>
           <div className="col-md-10 mx-auto cursor-pointer">

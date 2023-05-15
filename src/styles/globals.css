@@ -227,6 +227,7 @@ font-family: 'Poppins', sans-serif;
 @media (max-width: 767px) {
   .profile-1-span {
     margin-left: 0 !important;
+     margin-bottom: 10px !important;
     
   }
 
@@ -245,7 +246,6 @@ font-family: 'Poppins', sans-serif;
 }
 .profile-1-span {
   background-color: #fff1f1;
-  margin-left: 10px;
   padding: 15px;
   background: #FFE8E8;
 border-radius: 10px;
@@ -372,6 +372,7 @@ li::marker {
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 90vh;
 }
 
 
@@ -558,10 +559,10 @@ padding-bottom: 13px !important;
   text-align: end;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 997px) {
 .send-button-div{
   text-align: center !important;
-  margin-top: 20px !important;
+  margin-top: 10px !important;
 }
 }
 
@@ -575,7 +576,8 @@ padding-bottom: 13px !important;
 }
 .image-2{
   width: 70px !important;
-  background-image: url("/assets/profile2b.png");
+  height: 58px;
+  background-image: url("/assets/profile2b.svg");
   background-repeat: no-repeat;
   padding-right: 31px !important;
   padding-top: 14px !important;
@@ -688,6 +690,7 @@ font-family: 'Poppins', sans-serif;
   .image-2{
     width: 57px !important;
     padding-right: 20px !important;
+    height: 57px !important;
   }
 }
 
@@ -769,8 +772,8 @@ font-family: 'Roboto', sans-serif;
 
 @media (min-width:993px){
   #image_2{
- right: 62px;
-    top: 51px;
+ right: 80px;
+  top: 51px;
 }
 #image_1{
   right: 60px;
@@ -804,7 +807,8 @@ font-family: 'Roboto', sans-serif;
     top: 15px;
   }
   #image_2{
-    right: 15px;
+ right: 5px;
+    top: 5px;
   }
   #image_3{
     right: 20px;
@@ -814,11 +818,8 @@ font-family: 'Roboto', sans-serif;
   }
   #image_7{
         left: 10px;
-    top: -19px;
   }
-  #image_8{
-    top: -10px;
-  }
+
 }
 .search-input-homepage::placeholder{
 font-style: normal;
@@ -831,6 +832,7 @@ font-family: "Roboto",sans-serif;
 @media (min-width:1200px){
   .gutters{
         --bs-gutter-x: -150px !important;
+            margin-left: 75px;
   }
   .image-container{
      margin-left: 120px !important;
@@ -848,9 +850,10 @@ font-family: "Roboto",sans-serif;
 .search-input-main{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
-.w-85{
-  width: 85%;
+.w-83{
+  width: 83%;
 }
 .w-15{
   width: 15%;
@@ -859,7 +862,7 @@ font-family: "Roboto",sans-serif;
   .search-input-main{
     flex-direction: column;
   }
-  .w-85{
+  .w-83{
     width: 100%;
   }
 }

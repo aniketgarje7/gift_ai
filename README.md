@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Overview
+ Giftai is a gift suggestion app built with Next.js and the OpenAI API. It allows users to get personalized gift suggestions for their friends, family, and loved ones.
+
+## Features
+ 1.Personalized gift suggestions based on the user's input and OpenAI's GPT-3 language model.
+ 2.User-friendly interface with Bootstrap and Framer Motion.
+ 3.Easy to use: simply enter the recipient's name and interests, and Giftai will generate a list of gift suggestions.
+
+
 
 ## Getting Started
 
@@ -22,17 +31,16 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Requirnments
+ 1.OpenAi API key.
 
-To learn more about Next.js, take a look at the following resources:
+## TechStack Used
+1.Next.js
+2.Bootstrap
+3.OpenAi API
+4.Framer Motion
+5.React-Redux
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

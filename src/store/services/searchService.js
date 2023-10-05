@@ -11,7 +11,7 @@ async function searchFetch(data) {
         body: JSON.stringify(data),
     };
 console.log('in search fetch')
-    return fetch(`${process.env.NEXT_PUBLIC_API}/api/search`, requestOptions)
+    return fetch(`${process.env.NEXT_PUBLIC_API}`, requestOptions)
         .then((res)=>res.json())
         .then((response) => {
             return response;

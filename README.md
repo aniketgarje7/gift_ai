@@ -4,7 +4,9 @@
 
 ## Features
  1.Personalized gift suggestions based on the user's input and OpenAI's GPT-3 language model.
+ 
  2.User-friendly interface with Bootstrap and Framer Motion.
+ 
  3.Easy to use: simply enter the recipient's name and interests, and Giftai will generate a list of gift suggestions.
 
 

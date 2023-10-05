@@ -5,7 +5,6 @@ const HomePageFooter = () => {
     <div className="container footer-container">
       <div className="row justify-between">
         <div className="col-sm-4"></div>
-        <div className="col-sm-4  text-center">© 2023 Gift.ai | All Rights Reserved</div>
         <div className="col-sm-4 footer-contents" >
         <Link href="/privacy-policy" className="footer-links">Privacy Policy</Link>
           <span className="mx-3"> |</span>

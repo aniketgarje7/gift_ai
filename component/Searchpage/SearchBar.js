@@ -1,11 +1,11 @@
-import { BsArrowRightShort } from "react-icons/bs";
+"use client";
 import { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectSearchChat, searchFetch, setSearchChat } from "@/store/slices/searchSlice";
 import { useRouter } from "next/router";
 import { CiSearch } from "react-icons/ci";
 
-const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
+const SearchBar = ({ isLoading, setIsLoading }) => {
   const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
   const router = useRouter();
@@ -22,7 +22,23 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
     setIsLoading(true);
     dispatch(searchFetch({ messages: [...searchChat, { role: "user", content: `${searchText}` }] })).then((res) => {
       if (res.success) {
-        dispatch(setSearchChat([...searchChat, { role: "user", content: `${searchText}` }, { role: "assistant", content: `${res.formatted_response}` }]));
+        dispatch(setSearchChat([...searchChat, { role: "user", content: `${searchText}` }, { role: "assistant", content: `${res.data?.content}` }]));
+        setIsLoading(false);
+        setSearchText("");
+        router.push("/search");
+      }
+    });
+  };
+
+  const handleSearchHome = () => {
+    if (searchText === "") {
+      textareaRef.current.focus();
+      return;
+    }
+    setIsLoading(true);
+    dispatch(searchFetch({ messages: [...searchChat, { role: "user", content: `${searchText}` }] })).then((res) => {
+      if (res.success) {
+        dispatch(setSearchChat([...searchChat, { role: "user", content: `${searchText}` }, { role: "assistant", content: `${res.data?.content}` }]));
         setIsLoading(false);
         setSearchText("");
         router.push("/search");
@@ -48,12 +64,12 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
     setSearchText(e.target.value);
   };
 
-  const handleKeyDown = (e)=>{
-    if (e.key === 'Enter') {
-      handleSearch()
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
     }
-  }
-  const placeholderinput = width && width > 500 ? "iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)" : "Type your Message";
+  };
+  const placeholderinput = "Type your Message";
   return (
     <div className="container position-relative">
       {page ? (
@@ -70,7 +86,7 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
             />
           </div>
           <div className="w-15 send-button-div">
-            <button className="btn send-button px-5" onClick={(e) => handleSearch(e)} disabled={isLoading}>
+            <button className="btn send-button px-5" onClick={() => handleSearch()} disabled={isLoading}>
               Send
             </button>
           </div>
@@ -79,14 +95,14 @@ const SearchBar = ({ placeholder, isLoading, setIsLoading }) => {
         <div>
           <input
             ref={textareaRef}
-            id="home-textarea"
+            id="home-textarea-homepage"
             className="w-100 search-input-homepage"
             placeholder={placeholderinput}
             value={searchText}
             onChange={(e) => handletextareaOnchange(e)}
             onKeyDown={handleKeyDown}
           />
-          <span className="search-icon-span" onClick={(e) => handleSearch(e)} disabled={isLoading}>
+          <span className="search-icon-span" onClick={() => handleSearchHome()} disabled={isLoading}>
             <CiSearch className="search-icon cursor-pointer" />
           </span>
         </div>

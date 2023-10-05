@@ -25,6 +25,7 @@ export const searchFetch = (payload) => (dispatch) => {
         dispatch(setResult(response));
         return response;
     }, (error) => {
+        console.log(error,'error');
         return error;
     }
     );

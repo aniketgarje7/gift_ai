@@ -6,7 +6,6 @@ const SearchPageFooter = ()=>{
         <div className="container search-page-footer">
             <div className="row justify-between">
                 <div className="col-md-4"></div>
-                <div className="col-md-4  text-center">© 2023 Gift.ai | All Rights Reserved</div>
                 <div className="col-md-4 footer-contents" >
                     <Link href="/privacy-policy" className="footer-links">Privacy Policy</Link>
                     <span className="mx-3"> |</span>

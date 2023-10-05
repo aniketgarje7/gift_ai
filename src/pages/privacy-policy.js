@@ -1,5 +1,5 @@
-import Header from "../../component/Header";
-import Footer from "../../component/Footer";
+import Header from "../../component/Header&Footer/Header";
+import Footer from "../../component/Header&Footer/Footer";
 import Head from "next/head";
 
 const PrivacyPolicy = () => {

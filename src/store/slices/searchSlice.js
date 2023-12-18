@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { searchService } from '../services/searchService';
+import { toast } from 'react-toastify';
 
 export const searchSlice = createSlice({
     name: 'search',
@@ -23,6 +24,9 @@ export const { setResult, setSearchChat } = searchSlice.actions;
 export const searchFetch = (payload) => (dispatch) => {
     return searchService.searchFetch(payload).then((response) => {
         dispatch(setResult(response));
+        if(response.error){
+            toast.error(response.error.message || 'Error occured,plese try again.');
+        }
         return response;
     }, (error) => {
         console.log(error,'error');
